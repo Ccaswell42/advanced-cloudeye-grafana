@@ -5,7 +5,7 @@
       "label": "cloudeye-grafana",
       "description": "cloudeye plugin for grafana",
       "type": "datasource",
-      "pluginId": "huawei-cloudeye-grafana",
+      "pluginId": "cloudru-cloudeye-grafana",
       "pluginName": "cloudeye-grafana"
     }
   ],
@@ -96,7 +96,7 @@
           "region": "-"
         }
       ],
-      "title": "CPU使用率",
+      "title": "CPU",
       "type": "timeseries"
     },
     {
@@ -180,7 +180,7 @@
           "region": "-"
         }
       ],
-      "title": "磁盘读IOPS",
+      "title": "DiskReadIOPS",
       "type": "timeseries"
     },
     {
@@ -264,7 +264,7 @@
           "region": "-"
         }
       ],
-      "title": "磁盘写IOPS",
+      "title": "DiskWriteIOPS",
       "type": "timeseries"
     },
     {
@@ -348,7 +348,7 @@
           "region": "-"
         }
       ],
-      "title": "虚拟机入方向PPS",
+      "title": "ServerInboundPPS",
       "type": "timeseries"
     },
     {
@@ -432,7 +432,7 @@
           "region": "-"
         }
       ],
-      "title": "虚拟机出方向PPS",
+      "title": "ServerOutboundPPS",
       "type": "timeseries"
     },
     {
@@ -516,7 +516,7 @@
           "region": "-"
         }
       ],
-      "title": "虚拟机整机新建连接数",
+      "title": "NetworkConnections",
       "type": "timeseries"
     }
   ],
@@ -552,7 +552,7 @@
         "error": null,
         "hide": 0,
         "includeAll": false,
-        "label": "云服务器",
+        "label": "instance_id",
         "multi": false,
         "name": "instance_id",
         "options": [],

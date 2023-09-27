@@ -5,7 +5,7 @@
       "label": "cloudeye-grafana",
       "description": "cloudeye plugin for grafana",
       "type": "datasource",
-      "pluginId": "huawei-cloudeye-grafana",
+      "pluginId": "cloudru-cloudeye-grafana",
       "pluginName": "cloudeye-grafana"
     }
   ],
