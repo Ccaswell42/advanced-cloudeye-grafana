@@ -23,18 +23,15 @@ builds:
       - amd64
       - arm
       - arm64
+    binary:  'gpx_cloudeye-grafana_{{tolower .Os }}_{{tolower .Arch }}'
 
 archives:
   - format: tar.gz
     # this name template makes the OS and Arch compatible with the results of `uname`.
-    name_template: >-
-      {{ .ProjectName }}_
-      {{- title .Os }}_
-      {{- if eq .Arch "amd64" }}x86_64
-      {{- else if eq .Arch "386" }}i386
-      {{- else }}{{ .Arch }}{{ end }}
-      {{- if .Arm }}v{{ .Arm }}{{ end }}
     # use zip for windows archives
+   # wrap_in_directory: true
+    name_template: 'gpx_cloudeye-grafana_{{tolower .Os }}_{{tolower .Arch }}'
     format_overrides:
       - goos: windows
         format: zip
+        #gpx_cloudeye-grafana_darwin_amd64
