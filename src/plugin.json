@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "datasource",
   "name": "cloudeye-grafana",
-  "id": "huawei-cloudeye-grafana",
+  "id": "advanced-cloudeye-grafana",
   "metrics": true,
   "backend": true,
   "executable": "gpx_cloudeye-grafana",
   "info": {
-    "description": "huawei cloudeye grafana plugin",
+    "description": "advanced cloudeye grafana plugin",
     "author": {
       "name": "cloudeye",
       "url": ""
