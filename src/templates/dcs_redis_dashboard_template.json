@@ -25,7 +25,7 @@
       },
       "id": 7,
       "panels": [],
-      "title": "实例",
+      "title": "instance",
       "type": "row"
     },
     {
@@ -110,7 +110,7 @@
           "region": "-"
         }
       ],
-      "title": "内存使用率",
+      "title": "memory usage",
       "type": "timeseries"
     },
     {
@@ -195,7 +195,7 @@
           "region": "-"
         }
       ],
-      "title": "带宽使用率",
+      "title": "bandwidth usage",
       "type": "timeseries"
     },
     {
@@ -273,14 +273,14 @@
         {
           "dimstr": "dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "instantaneous_ops",
+          "metricName": "ops_per_second",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
           "region": "-"
         }
       ],
-      "title": "每秒并发操作数",
+      "title": "ops per second",
       "type": "timeseries"
     },
     {
@@ -365,7 +365,7 @@
           "region": "-"
         }
       ],
-      "title": "缓存键总数",
+      "title": "keys",
       "type": "timeseries"
     },
     {
@@ -443,14 +443,14 @@
         {
           "dimstr": "dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "rx_controlled",
+          "metricName": "flow_control_times",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
           "region": "-"
         }
       ],
-      "title": "流控次数",
+      "title": "flow control times",
       "type": "timeseries"
     },
     {
@@ -528,14 +528,14 @@
         {
           "dimstr": "dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "is_slow_log_exist",
+          "metricName": "slow_query_logs",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
           "region": "-"
         }
       ],
-      "title": "是否存在慢日志",
+      "title": "slow query logs",
       "type": "timeseries"
     },
     {
@@ -548,7 +548,7 @@
       },
       "id": 11,
       "panels": [],
-      "title": "数据节点",
+      "title": "node",
       "type": "row"
     },
     {
@@ -633,7 +633,7 @@
           "region": "-"
         }
       ],
-      "title": "内存使用率",
+      "title": "memory usage",
       "type": "timeseries"
     },
     {
@@ -718,7 +718,7 @@
           "region": "-"
         }
       ],
-      "title": "CPU使用率",
+      "title": "cpu usage",
       "type": "timeseries"
     },
     {
@@ -803,7 +803,7 @@
           "region": "-"
         }
       ],
-      "title": "带宽使用率",
+      "title": "bandwidth usage",
       "type": "timeseries"
     },
     {
@@ -881,14 +881,14 @@
         {
           "dimstr": "dcs_cluster_redis_node:00000000000000000000000000000000,dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "instantaneous_ops",
+          "metricName": "ops_per_second",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
           "region": "-"
         }
       ],
-      "title": "每秒并发操作数",
+      "title": "ops per second",
       "type": "timeseries"
     },
     {
@@ -973,7 +973,7 @@
           "region": "-"
         }
       ],
-      "title": "缓存键总数",
+      "title": "keys",
       "type": "timeseries"
     },
     {
@@ -1051,14 +1051,14 @@
         {
           "dimstr": "dcs_cluster_redis_node:00000000000000000000000000000000,dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "is_slow_log_exist",
+          "metricName": "slow_query_logs",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
           "region": "-"
         }
       ],
-      "title": "是否存在慢日志",
+      "title": "slow query logs",
       "type": "timeseries"
     },
     {
@@ -1071,7 +1071,7 @@
       },
       "id": 16,
       "panels": [],
-      "title": "Proxy节点",
+      "title": "Proxy",
       "type": "row"
     },
     {
@@ -1156,7 +1156,7 @@
           "region": "-"
         }
       ],
-      "title": "内存利用率",
+      "title": "memory usage",
       "type": "timeseries"
     },
     {
@@ -1241,7 +1241,7 @@
           "region": "-"
         }
       ],
-      "title": " CPU利用率",
+      "title": "cpu usage",
       "type": "timeseries"
     },
     {
@@ -1318,14 +1318,14 @@
         {
           "dimstr": "dcs_cluster_proxy2_node:00000000000000000000000000000000,dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "instantaneous_ops",
+          "metricName": "ops_per_second",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
           "region": "-"
         }
       ],
-      "title": "每秒并发操作数",
+      "title": "ops per second",
       "type": "timeseries"
     }
   ],
@@ -1356,7 +1356,7 @@
         "definition": "listDims($region,SYS.DCS,dcs_instance_id,dcs_instance_id)",
         "hide": 0,
         "includeAll": false,
-        "label": "Redis实例",
+        "label": "Redis-instance",
         "multi": false,
         "name": "dcs_instance_id",
         "options": [],
@@ -1372,7 +1372,7 @@
         "definition": "listDims($region,SYS.DCS,dcs_cluster_redis_node;$dcs_instance_id,dcs_cluster_redis_node)",
         "hide": 0,
         "includeAll": false,
-        "label": "数据节点",
+        "label": "node",
         "multi": false,
         "name": "dcs_cluster_redis_node",
         "options": [],
@@ -1394,7 +1394,7 @@
         "definition": "listDims($region,SYS.DCS,dcs_cluster_proxy2_node;$dcs_instance_id,dcs_cluster_proxy2_node)",
         "hide": 0,
         "includeAll": false,
-        "label": "Proxy节点",
+        "label": "Proxy",
         "multi": false,
         "name": "dcs_cluster_proxy2_node",
         "options": [],
@@ -1408,7 +1408,7 @@
       {
         "current": {
           "selected": false,
-          "text": "平均值",
+          "text": "average",
           "value": "average"
         },
         "datasource": "${cloudeye-grafana}",
@@ -1429,7 +1429,7 @@
       {
         "current": {
           "selected": false,
-          "text": "原始粒度",
+          "text": "original granularity",
           "value": "1"
         },
         "datasource": "${cloudeye-grafana}",
