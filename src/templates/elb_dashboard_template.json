@@ -27,7 +27,7 @@
       },
       "id": 2,
       "panels": [],
-      "title": "弹性负载均衡",
+      "title": "Elastic load balancer",
       "type": "row"
     },
     {
@@ -111,7 +111,7 @@
           "region": "-"
         }
       ],
-      "title": "正常主机数",
+      "title": "healthy servers",
       "type": "timeseries"
     },
     {
@@ -195,7 +195,7 @@
           "region": "-"
         }
       ],
-      "title": "异常主机数",
+      "title": "unhealthy servers",
       "type": "timeseries"
     },
     {
@@ -279,7 +279,7 @@
           "region": "-"
         }
       ],
-      "title": "网络流入速率",
+      "title": "inbound rate",
       "type": "timeseries"
     },
     {
@@ -363,7 +363,7 @@
           "region": "-"
         }
       ],
-      "title": "活跃连接数",
+      "title": "active connections",
       "type": "timeseries"
     },
     {
@@ -447,7 +447,7 @@
           "region": "-"
         }
       ],
-      "title": "非活跃连接数",
+      "title": "inactive connections",
       "type": "timeseries"
     },
     {
@@ -531,7 +531,7 @@
           "region": "-"
         }
       ],
-      "title": "新建连接数",
+      "title": "new connections",
       "type": "timeseries"
     },
     {
@@ -615,7 +615,7 @@
           "region": "-"
         }
       ],
-      "title": "流入数据包数",
+      "title": "incoming packets",
       "type": "timeseries"
     },
     {
@@ -699,7 +699,7 @@
           "region": "-"
         }
       ],
-      "title": "流出数据包数",
+      "title": "outgoing packets",
       "type": "timeseries"
     },
     {
@@ -783,7 +783,7 @@
           "region": "-"
         }
       ],
-      "title": "网络流入速率",
+      "title": "inbound rate",
       "type": "timeseries"
     },
     {
@@ -797,7 +797,7 @@
       },
       "id": 4,
       "panels": [],
-      "title": "监听器",
+      "title": "listener",
       "type": "row"
     },
     {
@@ -881,7 +881,7 @@
           "region": "-"
         }
       ],
-      "title": "并发连接数",
+      "title": "concurrent connections",
       "type": "timeseries"
     },
     {
@@ -965,7 +965,7 @@
           "region": "-"
         }
       ],
-      "title": "活跃连接数",
+      "title": "active connections",
       "type": "timeseries"
     },
     {
@@ -1049,7 +1049,7 @@
           "region": "-"
         }
       ],
-      "title": "非活跃连接数",
+      "title": "inactive connection",
       "type": "timeseries"
     },
     {
@@ -1133,7 +1133,7 @@
           "region": "-"
         }
       ],
-      "title": "新建连接数",
+      "title": "new connections",
       "type": "timeseries"
     },
     {
@@ -1217,7 +1217,7 @@
           "region": "-"
         }
       ],
-      "title": "流入数据包数",
+      "title": "incoming packets",
       "type": "timeseries"
     },
     {
@@ -1301,7 +1301,7 @@
           "region": "-"
         }
       ],
-      "title": "流出数据包数",
+      "title": "outgoing packets",
       "type": "timeseries"
     },
     {
@@ -1315,7 +1315,7 @@
       },
       "id": 12,
       "panels": [],
-      "title": "后端主机组",
+      "title": "Backend Server Groups",
       "type": "row"
     },
     {
@@ -1399,7 +1399,7 @@
           "region": "-"
         }
       ],
-      "title": "正常主机数",
+      "title": "healthy servers",
       "type": "timeseries"
     },
     {
@@ -1483,7 +1483,7 @@
           "region": "-"
         }
       ],
-      "title": "异常主机数",
+      "title": "unhealthy servers",
       "type": "timeseries"
     }
   ],
@@ -1520,7 +1520,7 @@
         "error": null,
         "hide": 0,
         "includeAll": false,
-        "label": "弹性负载均衡",
+        "label": "Elastic Load Balancer",
         "multi": false,
         "name": "lbaas_instance_id",
         "options": [],
@@ -1539,7 +1539,7 @@
         "error": null,
         "hide": 0,
         "includeAll": false,
-        "label": "监听器",
+        "label": "Listener",
         "multi": false,
         "name": "lbaas_listener_id",
         "options": [],
@@ -1558,7 +1558,7 @@
         "error": null,
         "hide": 0,
         "includeAll": false,
-        "label": "后端主机组",
+        "label": "Backend Server Groups",
         "multi": false,
         "name": "lbaas_pool_id",
         "options": [],
@@ -1573,7 +1573,7 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "平均值",
+          "text": "average",
           "value": "average"
         },
         "datasource": "${cloudeye-grafana}",
