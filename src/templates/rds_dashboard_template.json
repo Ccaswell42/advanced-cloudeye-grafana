@@ -27,7 +27,7 @@
       },
       "id": 4,
       "panels": [],
-      "title": "MySQL实例",
+      "title": "MySQL",
       "type": "row"
     },
     {
@@ -113,7 +113,7 @@
           "region": "-"
         }
       ],
-      "title": "CPU使用率",
+      "title": "CPU usage",
       "type": "timeseries"
     },
     {
@@ -199,7 +199,7 @@
           "region": "-"
         }
       ],
-      "title": "内存使用率",
+      "title": "memory usage",
       "type": "timeseries"
     },
     {
@@ -299,7 +299,7 @@
       },
       "id": 6,
       "panels": [],
-      "title": "GaussDB实例",
+      "title": "GaussDB",
       "type": "row"
     },
     {
@@ -385,7 +385,7 @@
           "region": "-"
         }
       ],
-      "title": "CPU使用率",
+      "title": "CPU usage",
       "type": "timeseries"
     },
     {
@@ -471,7 +471,7 @@
           "region": "-"
         }
       ],
-      "title": "内存使用率",
+      "title": "memory usage",
       "type": "timeseries"
     },
     {
@@ -570,7 +570,7 @@
       },
       "id": 18,
       "panels": [],
-      "title": "SQL Server实例",
+      "title": "SQL Server",
       "type": "row"
     },
     {
@@ -655,7 +655,7 @@
           "region": "-"
         }
       ],
-      "title": "CPU使用率",
+      "title": "CPU usage",
       "type": "timeseries"
     },
     {
@@ -740,7 +740,7 @@
           "region": "-"
         }
       ],
-      "title": "内存使用率",
+      "title": "memory usage",
       "type": "timeseries"
     },
     {
@@ -838,7 +838,7 @@
       },
       "id": 24,
       "panels": [],
-      "title": "PostgreSql实例",
+      "title": "PostgreSql",
       "type": "row"
     },
     {
@@ -923,7 +923,7 @@
           "region": "-"
         }
       ],
-      "title": "CPU使用率",
+      "title": "CPU",
       "type": "timeseries"
     },
     {
@@ -1008,7 +1008,7 @@
           "region": "-"
         }
       ],
-      "title": "内存使用率",
+      "title": "memory usage",
       "type": "timeseries"
     },
     {
@@ -1123,7 +1123,7 @@
         "definition": "listDims($region,SYS.RDS,rds_cluster_id,rds_cluster_id)",
         "hide": 0,
         "includeAll": false,
-        "label": "MySQL实例",
+        "label": "MySQL",
         "multi": false,
         "name": "rds_cluster_id",
         "options": [],
@@ -1139,7 +1139,7 @@
         "definition": "listDims($region,SYS.RDS,gaussdb_instance_id,gaussdb_instance_id)",
         "hide": 0,
         "includeAll": false,
-        "label": "GaussDB实例",
+        "label": "GaussDB",
         "multi": false,
         "name": "gaussdb_instance_id",
         "options": [],
@@ -1155,7 +1155,7 @@
         "definition": "listDims($region,SYS.RDS,rds_cluster_sqlserver_id,rds_cluster_sqlserver_id)",
         "hide": 0,
         "includeAll": false,
-        "label": "SqlServer实例",
+        "label": "SqlServer",
         "multi": false,
         "name": "rds_cluster_sqlserver_id",
         "options": [],
@@ -1171,7 +1171,7 @@
         "definition": "listDims($region,SYS.RDS,postgresql_cluster_id,postgresql_cluster_id)",
         "hide": 0,
         "includeAll": false,
-        "label": "PostgreSql实例",
+        "label": "PostgreSql",
         "multi": false,
         "name": "postgresql_cluster_id",
         "options": [],
@@ -1185,7 +1185,7 @@
       {
         "current": {
           "selected": false,
-          "text": "平均值",
+          "text": "average",
           "value": "average"
         },
         "datasource": "${cloudeye-grafana}",
@@ -1209,7 +1209,7 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "原始粒度",
+          "text": "original granularity",
           "value": "1"
         },
         "datasource": "${cloudeye-grafana}",
