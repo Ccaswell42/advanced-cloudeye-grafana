@@ -1,44 +1,48 @@
 # cloudeye-grafana
 [![LICENSE](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/huaweicloud/cloudeye-grafana/blob/master/LICENSE)
 
-cloudeye-grafana是[华为云监控服务](https://support.huaweicloud.com/ces/)为适配Grafana开发的datasource插件，通过[华为云SDK](https://github.com/huaweicloud/huaweicloud-sdk-go-v3)获取监控数据。
+Сloudeye-grafana is a datasource plugin to adapt to Grafana.
 
-# 快速入门
+# Quick start
 
-## 1. 安装
-> 安装前准备:  
-> a. 已安装Grafana版本 >=7.4.0, [grafana官方下载地址](https://grafana.com/grafana/download)  
-> b. 从[release页面](https://github.com/huaweicloud/cloudeye-grafana/releases)下载cloudeye-grafana-{version}.tar.gz
+## 1. Installation
+> Preparation before installation:
+> a. Grafana version >=7.4.0, [grafana](https://grafana.com/grafana/download)  
+> b. Download cloudeye-grafana.tar.gz from[release](https://github.com/huaweicloud/cloudeye-grafana/releases)cloudeye-grafana.tar.gz
 
 ### 1.1 从release安装
-a. 将下载的插件包放到grafana的plugin目录(见conf/defaults.ini中的plugins配置路径), 解压缩cloudeye-grafana-{version}.tar.gz, 需要注意目录权限和grafana运行权限保持一致
+a. Place the downloaded plugin package into the grafana plugin directory (see the plugins configuration path in conf/defaults.ini),
+decompress cloudeye-grafana-{version}.tar.gz, and pay attention to maintaining directory permissions and grafana running permissions.
   
-b. 修改 conf/defaults.ini 允许未签名插件运行    
-> allow_loading_unsigned_plugins = huawei-cloudeye-grafana  
+b. Modify conf/defaults.ini to allow unsigned plugins to run 
+> allow_loading_unsigned_plugins = cloudru-cloudeye-grafana  
    
-c. 重启grafana
+c. Restart grafana
 
-## 2. 配置cloudeye-grafana数据源
-> 配置前准备:  
-> a. [获取AK/SK](https://support.huaweicloud.com/devg-apisign/api-sign-provide-aksk.html)  
-> b. (可选)Specific Region Mode模式下需要[获取project_id](https://support.huaweicloud.com/devg-apisign/api-sign-provide-proid.html)  
-> c. (可选)Specific Region Mode模式下需要[获取CES Endpoint和RegionID](https://developer.huaweicloud.com/endpoint)
+## 2. Configure cloudeye-grafana data source
+> Preparation before configuration: 
+> a. [Obtain AK/SK](https://support.hc.sbercloud.ru/devg/apisign/api-sign-provide-aksk.html)  
+> b. [Obtain project_id](https://support.hc.sbercloud.ru/devg/apisign/api-sign-provide-proid.html)  
+> c. [Obtain CES Endpoint and RegionID](https://support.hc.sbercloud.ru/endpoint/index.html)
 
-### 2.1 配置数据源
-a. 进入grafana的数据源配置页面(Data Sources),点击Add data source进入配置表单页面,填入数据源名称cloudeye-grafana,
-在数据源列表中选择cloudeye-grafana。
+### 2.1 Configure data source
+a. Enter grafana's data source configuration page (Data Sources), click Add data source to enter the configuration form page,
+fill in the data source name cloudeye-grafana, and select cloudeye-grafana in the data source list.
 
-b. 当前支持两种模式，可按需选择配置。
-> Huaweicloud Mode（华为云多region模式）：配置IAM Access Key、IAM Secret Key
+b. Currently, supports only Specific Region Mode
 
-> Specific Region Mode（单region模式）：配置CES Endpoint、Region ID、Project ID、IAM Access Key、IAM Secret Key
+> Specific Region Mode：configure CES Endpoint、Region ID、Project ID、IAM Access Key、IAM Secret Key
 
-c. (可选)如果需要开启通过配置文件读取指标元数据，需要点击Get Metric Meta From Conf按钮开启，并按下文配置指标元数据列表。
+c. (Optional) If you need to enable reading indicator metadata through the configuration file, you need to click
+the Get Metric Meta From Conf button to enable it, and configure the indicator metadata [list as follows](#metrics).
 
-d. 点击Save & test按钮，如果显示Data source is working，说明数据源配置成功，可以开始在grafana中访问华为云监控的数据了。
+d. Click the Save & test button. If Data source is working is displayed, it means that the data source is configured successfully and you can start accessing Cloudru monitoring data in grafana.
 
-## 3. (可选)配置指标元数据列表
-为了提升查询体验，对于资源列表变化实时性不高、资源量大的租户，可以提前将资源列表配置在dist/metric.yaml文件中,区域/服务/资源/指标列表以配置文件为准。  
+
+<a name="metrics"></a>
+## 3. (Optional) Configure indicator metadata list
+In order to improve the query experience, for tenants whose resource list changes in real time and has a large amount of resources,
+the resource list can be configured in the dist/metric.yaml file in advance. The region/service/resource/metric list shall be subject to the configuration file.  
 > a. [云监控支持的服务指标列表](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)     
 > b. [华为云支持region列表](https://developer.huaweicloud.com/endpoint)  
 > c. 按metric.yaml样例配置完成后，重启grafana
