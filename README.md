@@ -43,18 +43,18 @@ d. Click the Save & test button. If Data source is working is displayed, it mean
 ## 3. (Optional) Configure indicator metadata list
 In order to improve the query experience, for tenants whose resource list changes in real time and has a large amount of resources,
 the resource list can be configured in the dist/metric.yaml file in advance. The region/service/resource/metric list shall be subject to the configuration file.  
-> a. [云监控支持的服务指标列表](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)     
-> b. [华为云支持region列表](https://developer.huaweicloud.com/endpoint)  
-> c. 按metric.yaml样例配置完成后，重启grafana
+> a. [List of service indicators supported by cloud monitoring](https://support.hc.sbercloud.ru/usermanual/ces/en-us_topic_0202622212.html)
+> b. After completing the configuration according to the metric.yaml sample, restart grafana
     
-## 4. 导入dashboard模板
-为简便租户配置，本插件提供了ECS、ELB、RDS服务的Dashboard预设模板，见： cloudeye-grafana/src/templates目录
+## 4. Import dashboard template
+To facilitate tenant configuration, this plug-in provides Dashboard preset templates for ECS, ELB, and RDS services, see: cloudeye-grafana/src/templates directory
 
-## 5. 创建自定义Dashboard
-a. 鼠标移动至页面左侧菜单"+"图标，选择Dashboard，点击即可创建
+## 5. Create a custom Dashboard
+a.  Move the mouse to the "+" icon in the menu on the left side of the page, select Dashboard, and click to create
 
-b. 创建好之后请点击右上角齿轮图标，选择左侧"Variables"菜单项，点击"Add variable"按钮添加filter和period模板变量。变量配置如下:
-> filter变量：
+b. After creation, please click the gear icon in the upper right corner, select the "Variables" menu item on the left, 
+and click the "Add variable" button to add filter and period template variables. The variable configuration is as follows
+> filter variable:
 ```
 {
     Name: filter,
@@ -65,7 +65,7 @@ b. 创建好之后请点击右上角齿轮图标，选择左侧"Variables"菜单
 }
 ```
 
-> period变量：
+> period variable:
 ```
 {
     Name: period,
@@ -76,6 +76,6 @@ b. 创建好之后请点击右上角齿轮图标，选择左侧"Variables"菜单
 }
 ```
 
-c. 配置好自定义模板变量后回到Dashboard页面，点击"Add an empty panel"按钮添加指标监控图表
+c. After configuring the custom template variables, return to the Dashboard page and click the "Add an empty panel" button to add an indicator monitoring chart.
 
-d. 点击右上角保存按钮，完成自定义Dashboard创建
+d. Click the save button in the upper right corner to complete the custom Dashboard creation
