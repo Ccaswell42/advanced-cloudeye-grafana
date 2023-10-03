@@ -1,0 +1,29 @@
+regions:
+  - ru-moscow-1
+
+namespaces:
+  ru-moscow-1:
+    - SYS.ECS
+    - SYS.ELB
+
+metrics:
+  SYS.ECS|instance_id:
+    - cpu_util
+    - mem_util
+
+  SYS.ELB|lbaas_instance_id,lbaas_listener_id:
+    - m1_cps
+    - m2_act_conn
+    - m3_inact_conn
+    - m9_abnormal_servers
+    - ma_normal_servers
+
+dimensions:
+  ru-moscow-1|SYS.ECS:
+    instance_id:
+      - xxx-000
+      - xxx-001
+  ru-moscow-1|SYS.ELB:
+    lbaas_instance_id,lbaas_listener_id:
+      - xxxxxxxx-x01,xxxx-xxx00
+      - xxxxxxxx-x01,xxxx-xxx01
