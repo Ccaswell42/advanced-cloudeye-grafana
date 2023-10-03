@@ -273,7 +273,7 @@
         {
           "dimstr": "dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "ops_per_second",
+          "metricName": "instantaneous_ops",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
@@ -443,7 +443,7 @@
         {
           "dimstr": "dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "flow_control_times",
+          "metricName": "rx_controlled",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
@@ -528,7 +528,7 @@
         {
           "dimstr": "dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "slow_query_logs",
+          "metricName": "is_slow_log_exist",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
@@ -881,7 +881,7 @@
         {
           "dimstr": "dcs_cluster_redis_node:00000000000000000000000000000000,dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "ops_per_second",
+          "metricName": "instantaneous_ops",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
@@ -1051,7 +1051,7 @@
         {
           "dimstr": "dcs_cluster_redis_node:00000000000000000000000000000000,dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "slow_query_logs",
+          "metricName": "is_slow_log_exist",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
@@ -1318,7 +1318,7 @@
         {
           "dimstr": "dcs_cluster_proxy2_node:00000000000000000000000000000000,dcs_instance_id:00000000-0000-0000-0000-000000000000",
           "filter": "average",
-          "metricName": "ops_per_second",
+          "metricName": "instantaneous_ops",
           "namespace": "SYS.DCS",
           "period": "1",
           "refId": "A",
