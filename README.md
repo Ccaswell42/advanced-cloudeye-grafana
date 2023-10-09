@@ -23,16 +23,16 @@ c. Restart grafana
 > Preparation before configuration: 
 > a. [Obtain AK/SK](https://support.hc.sbercloud.ru/devg/apisign/api-sign-provide-aksk.html)  
 > b. [Obtain project_id](https://support.hc.sbercloud.ru/devg/apisign/api-sign-provide-proid.html)  
-> c. [Obtain CES Endpoint and RegionID](https://support.hc.sbercloud.ru/endpoint/index.html)
+> c. [Obtain CES Endpoint](https://support.hc.sbercloud.ru/endpoint/index.html)
 
 ### 2.1 Configure data source
 a. Enter grafana's data source configuration page (Data Sources), click Add data source to enter the configuration form page,
 fill in the data source name cloudeye-grafana, and select cloudeye-grafana in the data source list.
 
 b. (Optional) If you need to enable reading indicator metadata through the configuration file, you need to click
-the Get Metric Meta From Conf button to enable it, and configure the indicator metadata [list as follows](#metrics).
+the `Get Metric Meta From Conf file` button to enable it, and configure the indicator metadata [list as follows](#metrics).
 
-c. Click the Save & test button. If Data source is working is displayed, it means that the data source is configured successfully and you can start accessing Cloudru monitoring data in grafana.
+c. Click the `Save & test` button. If `Data source` is working is displayed, it means that the data source is configured successfully and you can start accessing Cloudru monitoring data in grafana.
 
 
 <a name="metrics"></a>
