@@ -43,7 +43,7 @@ the resource list can be configured in the dist/metric.yaml file in advance. The
 > b. After completing the configuration according to the metric.yaml sample, restart grafana
     
 ## 4. Import dashboard template
-To facilitate tenant configuration, this plug-in provides Dashboard preset templates for ECS, ELB, and RDS services, see: cloudeye-grafana/src/templates directory
+To facilitate tenant configuration, this plugin provides Dashboard preset templates for ECS, ELB, and RDS services, see: /src/templates directory
 
 ## 5. Create a custom Dashboard
 a.  Move the mouse to the "+" icon in the menu on the left side of the page, select Dashboard, and click to create
