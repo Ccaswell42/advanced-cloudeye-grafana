@@ -12,7 +12,7 @@ export interface MyQuery extends DataQuery {
 }
 
 export const defaultQuery: Partial<MyQuery> = {
-  region: 'cn-east-3',
+  region: 'ru-moscow-1',
   namespace: 'SYS.ECS',
   dimstr: 'instance_id,1b674d59-0a56-4bf5-ad77-c5f8c63e9324',
   metricName: 'cpu_util',

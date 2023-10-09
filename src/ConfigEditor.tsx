@@ -16,10 +16,10 @@ interface ConfigEditorState {
 export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
   constructor(props: Props) {
     super(props);
-    this.props.options.jsonData.region = 'cn-east-3';
+    this.props.options.jsonData.region = 'ru-moscow-1';
     this.state = {
       tabs: [
-        { label: 'Huaweicloud Mode', active: true },
+        { label: 'Cloudru Mode', active: true },
         { label: 'Specific Region Mode', active: false },
       ],
     };
@@ -132,7 +132,7 @@ export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
         iamEndpoint: '',
         cesEndpoint: '',
         projectId: '',
-        region: 'cn-east-3',
+        region: 'ru-moscow-1',
       },
     });
   }
@@ -209,7 +209,7 @@ export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
                   inputWidth={20}
                   onChange={this.onCESEndpointChange}
                   value={jsonData.cesEndpoint || ''}
-                  placeholder="https://ces.cn-east-3.myhuaweicloud.com"
+                  placeholder="https://ces.ru-moscow-1.hc.sbercloud.ru"
                 />
                 <FormField
                   label="Region ID"
@@ -217,7 +217,7 @@ export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
                   inputWidth={20}
                   onChange={this.onRegionChange}
                   value={jsonData.region || ''}
-                  placeholder="cn-east-3"
+                  placeholder="ru-moscow-1"
                 />
                 <FormField
                   label="Project ID"
@@ -258,7 +258,7 @@ export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
         <InlineFieldRow>
           <InlineField
             label="Get Metric Meta From Conf File"
-            tooltip="打开开关后，通过metric.yaml配置获取区域/服务/资源/指标列表"
+            tooltip="After turning on the switch, obtain the region/service/resource/metric list through metric.yaml configuration"
           >
             <InlineSwitch css="" onChange={this.onMetaConfChange} value={jsonData.metaConfEnabled || false} />
           </InlineField>

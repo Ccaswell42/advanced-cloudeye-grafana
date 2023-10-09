@@ -28,7 +28,7 @@ export class DataSource extends DataSourceWithBackend<MyQuery, MyDataSourceOptio
     return promise.then((data: any) => ({ data }));
   }
 
-  // 不使用模板，使用自定义dashboard的场景查询监控数据
+  // Do not use templates, use custom dashboard scenarios to query monitoring data
   listMetricDataByCustom(options: any) {
     const promises = options.targets.map((target: any) => {
       const metrics: any[] = [];
@@ -46,7 +46,7 @@ export class DataSource extends DataSourceWithBackend<MyQuery, MyDataSourceOptio
         to: options.range.to.valueOf(),
         filter: target.filter || 'average',
         period: target.period || '1',
-        region: target.region || 'cn-east-3',
+        region: target.region || 'ru-moscow-1',
       };
       // @ts-ignore
       return this.listMetricData(reqBody).then((response) => {
@@ -81,7 +81,7 @@ export class DataSource extends DataSourceWithBackend<MyQuery, MyDataSourceOptio
     return promises;
   }
 
-  // 使用模板生成dashboard场景查询监控数据
+  // Use templates to generate dashboard scenarios to query monitoring data
   listMetricDataByTemplate(options: any) {
     const metrics: any[] = [];
     const refIDs: any[] = [];
@@ -106,7 +106,7 @@ export class DataSource extends DataSourceWithBackend<MyQuery, MyDataSourceOptio
       to: options.range.to.valueOf(),
       filter: this.getVarValue('filter', 'average'),
       period: this.getVarValue('period', '1'),
-      region: this.getVarValue('region', 'cn-east-3'),
+      region: this.getVarValue('region', 'ru-moscow-1'),
     };
     if (metrics.length === 0 || refIDs.length === 0) {
       return new Promise((resolve) => resolve).then(() => {
@@ -183,18 +183,18 @@ export class DataSource extends DataSourceWithBackend<MyQuery, MyDataSourceOptio
 
   listFilterOptions(): any[] {
     return [
-      { text: '平均值', label: '平均值', value: 'average' },
-      { text: '最小值', label: '最小值', value: 'min' },
-      { text: '最大值', label: '最大值', value: 'max' },
-      { text: '求和值', label: '求和值', value: 'sum' },
+      { text: 'average', label: 'average', value: 'average' },
+      { text: 'min', label: 'min', value: 'min' },
+      { text: 'max', label: 'max', value: 'max' },
+      { text: 'sum', label: 'sum', value: 'sum' },
     ];
   }
 
   listPeriodOptions(): any[] {
     return [
-      { text: '原始粒度', label: '原始粒度', value: '1' },
-      { text: '5min粒度', label: '5min粒度', value: '300' },
-      { text: '1h粒度', label: '1h粒度', value: '3600' },
+      { text: '1s', label: '1s', value: '1' },
+      { text: '5min', label: '5min', value: '300' },
+      { text: '1h', label: '1h', value: '3600' },
     ];
   }
 
