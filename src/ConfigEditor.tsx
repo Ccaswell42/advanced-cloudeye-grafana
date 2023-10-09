@@ -17,11 +17,9 @@ export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
   constructor(props: Props) {
     super(props);
     this.props.options.jsonData.region = 'ru-moscow-1';
+    this.props.options.jsonData.cesEndpoint = 'ces.ru-moscow-1.hc.sbercloud.ru';
     this.state = {
-      tabs: [
-        { label: 'Cloudru Mode', active: true },
-        { label: 'Specific Region Mode', active: false },
-      ],
+      tabs: [{ label: 'Cloudru Mode', active: true }],
     };
   }
 
@@ -30,15 +28,6 @@ export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
     const jsonData = {
       ...options.jsonData,
       cesEndpoint: event.target.value,
-    };
-    onOptionsChange({ ...options, jsonData });
-  };
-
-  onRegionChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const { onOptionsChange, options } = this.props;
-    const jsonData = {
-      ...options.jsonData,
-      region: event.target.value,
     };
     onOptionsChange({ ...options, jsonData });
   };
@@ -173,36 +162,6 @@ export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
           {this.state.tabs[0].active && (
             <div className="gf-form-group">
               <div className="form-line-style">
-                <div className="gf-form-inline">
-                  <div className="gf-form">
-                    <SecretFormField
-                      isConfigured={(secureJsonFields && secureJsonFields.accessKey) as boolean}
-                      value={secureJsonData.accessKey || ''}
-                      label="IAM Access Key"
-                      placeholder="access key"
-                      labelWidth={10}
-                      inputWidth={20}
-                      onReset={this.onResetAK}
-                      onChange={this.onAKChange}
-                    />
-                    <SecretFormField
-                      isConfigured={(secureJsonFields && secureJsonFields.secretKey) as boolean}
-                      value={secureJsonData.secretKey || ''}
-                      label="IAM Secret Key"
-                      placeholder="secret key"
-                      labelWidth={10}
-                      inputWidth={20}
-                      onReset={this.onResetSK}
-                      onChange={this.onSKChange}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-          {this.state.tabs[1].active && (
-            <div className="gf-form-group">
-              <div className="form-line-style">
                 <FormField
                   label="CES endpoint"
                   labelWidth={10}
@@ -210,14 +169,6 @@ export class ConfigEditor extends PureComponent<Props, ConfigEditorState> {
                   onChange={this.onCESEndpointChange}
                   value={jsonData.cesEndpoint || ''}
                   placeholder="https://ces.ru-moscow-1.hc.sbercloud.ru"
-                />
-                <FormField
-                  label="Region ID"
-                  labelWidth={10}
-                  inputWidth={20}
-                  onChange={this.onRegionChange}
-                  value={jsonData.region || ''}
-                  placeholder="ru-moscow-1"
                 />
                 <FormField
                   label="Project ID"

@@ -28,11 +28,6 @@ export class QueryEditor extends PureComponent<Props> {
     onRunQuery();
   };
 
-  onRegionChange = (item: any) => {
-    const { onChange, query } = this.props;
-    onChange({ ...query, region: item.value });
-  };
-
   onNamespaceChange = (item: any) => {
     const { onChange, query } = this.props;
     onChange({ ...query, namespace: item.value });
@@ -57,17 +52,6 @@ export class QueryEditor extends PureComponent<Props> {
     return (
       <div className="gf-form">
         <div className="gf-form-inline">
-          <InlineFormLabel width={5} tooltip={<p>Select Region</p>}>
-            Region
-          </InlineFormLabel>
-          <SegmentAsync
-            loadOptions={() => datasource.listRegions()}
-            placeholder="region"
-            value={query.region}
-            allowCustomValue={false}
-            onChange={this.onRegionChange}
-          />
-
           <InlineFormLabel width={5} tooltip={<p>Select namespace</p>}>
             Namespace
           </InlineFormLabel>

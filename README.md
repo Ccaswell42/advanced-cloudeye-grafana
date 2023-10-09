@@ -29,14 +29,10 @@ c. Restart grafana
 a. Enter grafana's data source configuration page (Data Sources), click Add data source to enter the configuration form page,
 fill in the data source name cloudeye-grafana, and select cloudeye-grafana in the data source list.
 
-b. Currently, supports only Specific Region Mode
-
-> Specific Region Mode：configure CES Endpoint、Region ID、Project ID、IAM Access Key、IAM Secret Key
-
-c. (Optional) If you need to enable reading indicator metadata through the configuration file, you need to click
+b. (Optional) If you need to enable reading indicator metadata through the configuration file, you need to click
 the Get Metric Meta From Conf button to enable it, and configure the indicator metadata [list as follows](#metrics).
 
-d. Click the Save & test button. If Data source is working is displayed, it means that the data source is configured successfully and you can start accessing Cloudru monitoring data in grafana.
+c. Click the Save & test button. If Data source is working is displayed, it means that the data source is configured successfully and you can start accessing Cloudru monitoring data in grafana.
 
 
 <a name="metrics"></a>
