@@ -1,4 +1,4 @@
-import {DataQuery, DataSourceJsonData} from '@grafana/data';
+import { DataQuery, DataSourceJsonData } from '@grafana/data';
 
 export interface MyQuery extends DataQuery {
   region?: string;
@@ -12,12 +12,12 @@ export interface MyQuery extends DataQuery {
 }
 
 export const defaultQuery: Partial<MyQuery> = {
-  region: "cn-east-3",
-  namespace: "SYS.ECS",
-  dimstr: "instance_id,1b674d59-0a56-4bf5-ad77-c5f8c63e9324",
-  metricName: "cpu_util",
-  filter: "average",
-  period: "1",
+  region: 'cn-east-3',
+  namespace: 'SYS.ECS',
+  dimstr: 'instance_id,1b674d59-0a56-4bf5-ad77-c5f8c63e9324',
+  metricName: 'cpu_util',
+  filter: 'average',
+  period: '1',
 };
 
 /**

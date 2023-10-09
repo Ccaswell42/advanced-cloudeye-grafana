@@ -1,52 +1,52 @@
-import {defaults} from 'lodash';
+import { defaults } from 'lodash';
 
-import React, {PureComponent} from 'react';
-import {InlineFormLabel, SegmentAsync, Select} from '@grafana/ui';
-import {QueryEditorProps} from '@grafana/data';
-import {DataSource} from './datasource';
-import {defaultQuery, MyDataSourceOptions, MyQuery} from './types';
-import './css/common.css'
+import React, { PureComponent } from 'react';
+import { InlineFormLabel, SegmentAsync, Select } from '@grafana/ui';
+import { QueryEditorProps } from '@grafana/data';
+import { DataSource } from './datasource';
+import { defaultQuery, MyDataSourceOptions, MyQuery } from './types';
+import './css/common.css';
 
 // @ts-ignore
 type Props = QueryEditorProps<DataSource, MyQuery, MyDataSourceOptions>;
 
 export class QueryEditor extends PureComponent<Props> {
   componentDidMount() {
-    const {onRunQuery} = this.props;
+    const { onRunQuery } = this.props;
     onRunQuery();
   }
 
   onFilterChange = (item: any) => {
-    const {onChange, onRunQuery, query} = this.props;
-    onChange({...query, filter: item.value});
+    const { onChange, onRunQuery, query } = this.props;
+    onChange({ ...query, filter: item.value });
     onRunQuery();
   };
 
   onPeriodChange = (item: any) => {
-    const {onChange, onRunQuery, query} = this.props;
-    onChange({...query, period: item.value});
+    const { onChange, onRunQuery, query } = this.props;
+    onChange({ ...query, period: item.value });
     onRunQuery();
   };
 
   onRegionChange = (item: any) => {
-    const {onChange, query} = this.props;
-    onChange({...query, region: item.value});
+    const { onChange, query } = this.props;
+    onChange({ ...query, region: item.value });
   };
 
   onNamespaceChange = (item: any) => {
-    const {onChange, query} = this.props;
-    onChange({...query, namespace: item.value});
+    const { onChange, query } = this.props;
+    onChange({ ...query, namespace: item.value });
   };
 
   onDimstrChange = (item: any) => {
-    const {query, onChange, onRunQuery} = this.props;
-    onChange({...query, dimstr: item.value});
+    const { query, onChange, onRunQuery } = this.props;
+    onChange({ ...query, dimstr: item.value });
     onRunQuery();
   };
 
   onMetricNameChange = (item: any) => {
-    const {query, onRunQuery, onChange} = this.props;
-    onChange({...query, metricName: item.value});
+    const { query, onRunQuery, onChange } = this.props;
+    onChange({ ...query, metricName: item.value });
     onRunQuery();
   };
 
