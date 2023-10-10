@@ -1,4 +1,4 @@
-module github.com/huaweicloud/cloudeye-grafana
+module github.com/cloudru/cloudeye-grafana
 
 go 1.18
 

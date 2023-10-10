@@ -1,7 +1,7 @@
 {
-  "name": "huawei-cloudeye-grafana",
+  "name": "cloudru-cloudeye-grafana",
   "version": "1.0.0",
-  "description": "huawei cloudeye grafana plugin",
+  "description": "cloudru cloudeye grafana plugin",
   "scripts": {
     "build": "grafana-toolkit plugin:build",
     "test": "grafana-toolkit plugin:test",

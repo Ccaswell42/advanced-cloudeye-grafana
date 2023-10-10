@@ -21,7 +21,7 @@ func GetCESClient(c *CloudEyeSettings) *ces.CesClient {
 		WithSk(c.SK)
 
 	httpConfig := config.DefaultHttpConfig().WithIgnoreSSLVerification(true)
-	// 单region模式
+	// Single region mode
 	if c.ProjectID != "" && c.CESEndpoint != "" {
 		creBuilder = creBuilder.WithProjectId(c.ProjectID)
 		clientBuilder := ces.CesClientBuilder().
@@ -31,7 +31,7 @@ func GetCESClient(c *CloudEyeSettings) *ces.CesClient {
 		return ces.NewCesClient(clientBuilder.Build())
 	}
 
-	// 多region模式，只支持华为云, region列表依赖SDK
+	// Multi-region mode, the region list depends on the SDK
 	clientBuilder := ces.CesClientBuilder().
 		WithCredential(creBuilder.Build()).
 		WithHttpConfig(httpConfig).
@@ -212,7 +212,7 @@ func (c *CESClient) ListMeta(param *QueryParam) []string {
 	}
 }
 
-func procMetaList(metrics []model.MetricInfoList, metaUtil MetaUtil, isMetaExist map[string]bool, metaList *[]string){
+func procMetaList(metrics []model.MetricInfoList, metaUtil MetaUtil, isMetaExist map[string]bool, metaList *[]string) {
 	for _, metric := range metrics {
 		if len(metric.Dimensions) > 3 {
 			continue
@@ -235,7 +235,7 @@ func getMeta(metaCache *MetaCache, key string, reqParam *model.ListMetricsReques
 			return nil, nil, cachedMeta.Meta
 		}
 
-		// 大租户可能被流控，接着上次的marker继续请求
+		// Large tenants may be flow controlled and continue to request the last marker.
 		if !cachedMeta.Finished {
 			reqParam.Start = &cachedMeta.Marker
 			metaList = cachedMeta.Meta

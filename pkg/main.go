@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
+	"github.com/cloudru/cloudeye-grafana/pkg/plugin"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/huaweicloud/cloudeye-grafana/pkg/plugin"
 )
 
 func main() {
