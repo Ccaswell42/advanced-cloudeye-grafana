@@ -8,7 +8,7 @@
 ## 1. Installation
 > Preparation before installation:
 > a. Grafana version >=7.4.0, [grafana](https://grafana.com/grafana/download)  
-> b. Download cloudeye-grafana.tar.gz from [release](https://github.com/huaweicloud/cloudeye-grafana/releases) cloudeye-grafana.tar.gz
+> b. Download cloudeye-grafana.tar.gz from [release](https://github.com/Ccaswell42/advanced-cloudeye-grafana/releases) cloudeye-grafana.tar.gz
 
 ### 1.1 Installation from release
 a. Place the downloaded plugin package into the grafana plugin directory (see the plugins configuration path in conf/defaults.ini),
